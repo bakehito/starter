@@ -6,8 +6,17 @@ return {
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
-              checkOnSave = {
-                command = "clippy",
+              checkOnSave = true,
+              check = { command = "clippy" },
+              completion = {
+                autoimport = {
+                  enable = false,
+                },
+              },
+              imports = {
+                granularity = {
+                  group = "module",
+                },
               },
               inlayHints = {
                 bindingModeHints = {
