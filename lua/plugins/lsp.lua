@@ -6,6 +6,9 @@ return {
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
+              cargo = {
+                features = "all",
+              },
               checkOnSave = true,
               check = { command = "clippy" },
               completion = {
